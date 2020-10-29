@@ -4,9 +4,16 @@ services:
   rabbitmq:
     image: rabbitmq:3.8.9-management
     hostname: rabbit1.pge.ce.gov.br
+    container_name: rabbit1
     volumes:
       - /appfiles/rabbitmq1/data/:/var/lib/rabbitmq
       - /appfiles/rabbitmq1/data/logs/:/var/log/rabbitmq
+    environment:
+            RABBITMQ_USE_LONGNAME: true
+            RABBITMQ_LOGS: /var/log/rabbitmq/rabbit.log
     ports:
+      - 4369:4369
       - 5672:5672
       - 15672:15672
+      - 25672:25672
+      - 35197:35197
