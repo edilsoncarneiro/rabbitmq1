@@ -1,10 +1,8 @@
 version: '3.8'
 
-build:
-  command: cp -R ./rabbitmq1 /appfiles/
-
 services:
   rabbitmq:
+    command: cp -R ./rabbitmq1 /appfiles/
     image: rabbitmq:3.8.9-management
     hostname: rabbit1.pge.ce.gov.br
     container_name: rabbit1
