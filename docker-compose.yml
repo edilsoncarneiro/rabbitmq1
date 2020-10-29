@@ -5,8 +5,7 @@ services:
     image: rabbitmq:3.8.9-management
     hostname: rabbit1.pge.ce.gov.br
     container_name: rabbit1
-    command: cp -R ./rabbitmq1 /appfiles/
-volumes:
+    volumes:
       - /appfiles/rabbitmq1/data/:/var/lib/rabbitmq
       - /appfiles/rabbitmq1/data/logs/:/var/log/rabbitmq
     environment:
