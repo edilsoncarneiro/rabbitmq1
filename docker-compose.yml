@@ -9,8 +9,8 @@ services:
       - /appfiles/rabbitmq1/data/:/var/lib/rabbitmq
       - /appfiles/rabbitmq1/data/logs/:/var/log/rabbitmq
     environment:
-            RABBITMQ_USE_LONGNAME: true
-            RABBITMQ_LOGS: /var/log/rabbitmq/rabbit.log
+            RABBITMQ_USE_LONGNAME: "true"
+            RABBITMQ_LOGS: "/var/log/rabbitmq/rabbit.log"
     ports:
       - 4369:4369
       - 5672:5672
