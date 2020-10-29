@@ -2,13 +2,11 @@ version: '3.8'
 
 services:
   rabbitmq:
-    # build:
-    #     dockerfile: ./rabbit.dockerfile
-    #     context: .
     image: rabbitmq:3.8.9-management
     hostname: rabbit1.pge.ce.gov.br
     container_name: rabbit1
     volumes:
+      - /appfiles/rabbitmq1/definitions.json:/etc/rabbitmq/definitions.json
       - /appfiles/rabbitmq1/data/:/var/lib/rabbitmq
       - /appfiles/rabbitmq1/data/logs/:/var/log/rabbitmq
     environment:
