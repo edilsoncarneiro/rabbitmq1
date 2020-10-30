@@ -9,3 +9,4 @@ Executar o comando abaixo para criar a instância rabbit1.pge.ce.gov.br
 4. Executar o comando:
     docker-compose up -d
 5. Acessar a aplicação, que roda na porta 15672
+6. Teste
